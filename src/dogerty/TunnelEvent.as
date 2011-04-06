@@ -28,5 +28,9 @@ package dogerty
 			return p_messageContent;
 		}
 		
+		override public function clone():Event
+		{
+			return new TunnelEvent(this.type,p_messageType, p_messageContent);
+		}
 	}
 }
